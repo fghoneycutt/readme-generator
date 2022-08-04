@@ -56,32 +56,58 @@ const questions = [
 //       }
 //     },
 //   },
-  {
-    type: "input",
-    name: "github",
-    message: "Enter your GitHub username:",
-    validate: (input) => {
-      if (input) {
-        return true;
-      } else {
-        console.log("Please enter your GitHub username.");
-        return false;
-      }
-    },
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "Enter your email address:",
-    validate: (input) => {
-      if (input) {
-        return true;
-      } else {
-        console.log("Please enter your email address.");
-        return false;
-      }
-    },
-  },
+//   {
+//     type: "input",
+//     name: "github",
+//     message: "Enter your GitHub username:",
+//     validate: (input) => {
+//       if (input) {
+//         return true;
+//       } else {
+//         console.log("Please enter your GitHub username.");
+//         return false;
+//       }
+//     },
+//   },
+//   {
+//     type: "input",
+//     name: "contribution",
+//     message: "Enter the contribution guidelines:",
+//     validate: (input) => {
+//       if (input) {
+//         return true;
+//       } else {
+//         console.log("Please enter the contribution guidlines.");
+//         return false;
+//       }
+//     },
+//   },
+//   {
+//     type: "input",
+//     name: "test",
+//     message: "Enter test instructions for your project:",
+//     validate: (input) => {
+//       if (input) {
+//         return true;
+//       } else {
+//         console.log("Please enter test instructions for your project.");
+//         return false;
+//       }
+//     },
+//   },
+//   {
+//     type: "input",
+//     name: "email",
+//     message: "Enter your email address:",
+//     validate: (input) => {
+//       if (input) {
+//         return true;
+//       } else {
+//         console.log("Please enter your email address.");
+//         return false;
+//       }
+//     },
+//   },
 ];
 
 // TODO: Create a function to write README file
@@ -101,7 +127,7 @@ function writeToFile(data) {
 };
 
 // TODO: Create a function to initialize app
-const init = markdownData => {
+function init() {
     return inquirer.prompt(questions);
 }
 // Function call to initialize app
@@ -110,6 +136,9 @@ init()
     return generateMarkdown(markdownData);
 })
 .then(writeToFile)
+.then(writeToFileResponse => {
+    console.log(writeToFileResponse);
+})
 .catch(err => {
     console.log(err);
 });
