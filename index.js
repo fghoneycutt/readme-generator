@@ -33,16 +33,30 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    
+function writeToFile(data) {
+    console.log("data: " + data);
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/README.md', data, err => {
+            if (err){
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: "File Created!"
+            });
+        });
+    });
 };
 
 // TODO: Create a function to initialize app
-function init() {
+const init = markdownData => {
     return inquirer.prompt(questions);
 }
 // Function call to initialize app
 init()
-.then(generateMarkdown)
+.then(markdownData => {
+    return generateMarkdown(markdownData);
+})
 .then(writeToFile);
 
