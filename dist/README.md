@@ -1,6 +1,7 @@
-# sure thing!
+# stuff
+  ![License: None](https://img.shields.io/badge/License-None-blue.svg)
 ## Description
-daddy
+thangs
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -13,6 +14,7 @@ undefined
 ## Usage
 undefined
 ## License
+There is no license associated with this project.
 ## Contributing
 undefined
 ## Tests
