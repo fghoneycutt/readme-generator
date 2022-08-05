@@ -1,7 +1,7 @@
-# stuff
+# Sample title
   ![License: None](https://img.shields.io/badge/License-None-blue.svg)
 ## Description
-thangs
+Sample description
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -10,16 +10,16 @@ thangs
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-undefined
+Installation instructions here
 ## Usage
-undefined
+Project usage here
 ## License
 There is no license associated with this project.
 ## Contributing
-undefined
+Contribution guidelines here
 ## Tests
-undefined
+Test instructions here
 ## Questions
-Link to my GitHub profile - https://github.com/undefined
+Link to my GitHub profile - https://github.com/fghoneycutt
 
-Email me with any additional questions - undefined
+Email me with any additional questions - fghoneycutt@gmail.com
